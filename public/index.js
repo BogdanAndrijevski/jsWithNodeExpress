@@ -3,17 +3,17 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("links-container").innerHTML = ""; // Clear existing links
         try {
             // Start timing when the button is clicked
-            // const startTime1 = performance.now();
+            const startTime1 = performance.now();
 
             // First fetch request
-            // const responsePromise1 = fetch('/scrape').then(response => table(response, startTime1));
+            const responsePromise1 = fetch('/scrape').then(response => table(response, startTime1));
 
             // Start timing for the second fetch request
-            const startTime2 = performance.now();
-            console.log(`Scraping initiated!`);
+            // const startTime2 = performance.now();
+            // console.log(`Scraping initiated!`);
 
             // Second fetch request
-            const responsePromise2 = fetch('/scrape2').then(response => table(response, startTime2));
+            // const responsePromise2 = fetch('/scrape2').then(response => table(response, startTime2));
 
             // No need to await here, allow responses to be processed independently
 
