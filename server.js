@@ -8,7 +8,13 @@ const cheerio = require("cheerio");
 app.use(express.static("public"));
 
 async function scrape() {
-    const browser = await puppeteer.launch();
+    // const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+        headless: 'new',
+        // `headless: true` (default) enables old Headless;
+        // `headless: 'new'` enables new Headless;
+        // `headless: false` enables "headful" mode.
+      });
     const page = await browser.newPage();
     await page.goto('https://www.google.com/search?q=asd');
 
